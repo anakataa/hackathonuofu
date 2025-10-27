@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    {% include 'common/header.html' %}
+</head>
+
+<body class="d-flex vh-100 justify-content-center bg-opacity-50">
+    <!-- Adding a calendar week styled layout -->
+    <div class="calendar-week">
+        <div class="day" id="Sunday">
+            <h1>Sunday</h1>
+            {% set day = days["sunday"] %}
+            {% if day["local_uv_irradiance_index"] == "Low" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"></div>
+            {% elif day["local_uv_irradiance_index"] == "Moderate" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.5;"></div>
+            {% elif day["local_uv_irradiance_index"] == "High" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.25;"></div>
+            {% else %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"
+                style="opacity: 0.1;"></div>
+            {% endif %}
+            <h2 style="margin-top: 20px;">UV Irradiance Index:</h2>
+            <p class="radiance">{{day["local_uv_irradiance_index"]}}</p>
+            <h2>Max temp:</h2>
+            <p>{{day["max_temp"]}}°C</p>
+            <h2>Min temp:</h2>
+            <p>{{day["min_temp"]}}°C</p>
+            <h2>Pressure:</h2>
+            <p>{{day["pressure"]}}</p>
+            <h2>Sunrise/Sunset:</h2>
+            <p class="eternity">{{day["sunrise"]}} - {{day["sunset"]}}</p>
+            {% if day["predicted"] %}
+                <h2 style="color:blueviolet;"><i>Prediction</i></h2>
+            {% else %}
+                <h2 style="color:brown;">Actual</h2>
+            {% endif %}
+            <h2 class="date">{{day["terrestrial_date"]}}</h2>
+            
+        </div>
+        <div class="day" id="Monday">
+            <h1>Monday</h1>
+            {% set day = days["monday"] %}
+            {% if day["local_uv_irradiance_index"] == "Low" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"></div>
+            {% elif day["local_uv_irradiance_index"] == "Moderate" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.5;"></div>
+            {% elif day["local_uv_irradiance_index"] == "High" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.25;"></div>
+            {% else %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"
+                style="opacity: 0.1;"></div>
+            {% endif %}
+            <h2 style="margin-top: 20px;">UV Irradiance Index:</h2>
+            <p class="radiance">{{day["local_uv_irradiance_index"]}}</p>
+            <h2>Max temp:</h2>
+            <p>{{day["max_temp"]}}°C</p>
+            <h2>Min temp:</h2>
+            <p>{{day["min_temp"]}}°C</p>
+            <h2>Pressure:</h2>
+            <p>{{day["pressure"]}}</p>
+            <h2>Sunrise/Sunset:</h2>
+            <p class="eternity">{{day["sunrise"]}} - {{day["sunset"]}}</p>
+            {% if day["predicted"] %}
+                <h2 style="color:blueviolet;"><i>Prediction</i></h2>
+            {% else %}
+                <h2 style="color:brown;">Actual</h2>
+            {% endif %}
+            <h2 class="date">{{day["terrestrial_date"]}}</h2>
+        </div>
+        <div class="day" id="Tuesday">
+            <h1>Tuesday</h1>
+            {% set day = days["tuesday"] %}
+            {% if day["local_uv_irradiance_index"] == "Low" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"></div>
+            {% elif day["local_uv_irradiance_index"] == "Moderate" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.5;"></div>
+            {% elif day["local_uv_irradiance_index"] == "High" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.25;"></div>
+            {% else %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"
+                style="opacity: 0.1;"></div>
+            {% endif %}
+            <h2 style="margin-top: 20px;">UV Irradiance Index:</h2>
+            <p class="radiance">{{day["local_uv_irradiance_index"]}}</p>
+            <h2>Max temp:</h2>
+            <p>{{day["max_temp"]}}°C</p>
+            <h2>Min temp:</h2>
+            <p>{{day["min_temp"]}}°C</p>
+            <h2>Pressure:</h2>
+            <p>{{day["pressure"]}}</p>
+            <h2>Sunrise/Sunset:</h2>
+            <p class="eternity">{{day["sunrise"]}} - {{day["sunset"]}}</p>
+            {% if day["predicted"] %}
+                <h2 style="color:blueviolet;"><i>Prediction</i></h2>
+            {% else %}
+                <h2 style="color:brown;">Actual</h2>
+            {% endif %}
+            <h2 class="date">{{day["terrestrial_date"]}}</h2>
+        </div>
+        <div class="day" id="Wednesday">
+            <h1>Wednesday</h1>
+            {% set day = days["wednesday"] %}
+            {% if day["local_uv_irradiance_index"] == "Low" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"></div>
+            {% elif day["local_uv_irradiance_index"] == "Moderate" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.5;"></div>
+            {% elif day["local_uv_irradiance_index"] == "High" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.25;"></div>
+            {% else %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"
+                style="opacity: 0.1;"></div>
+            {% endif %}
+            <h2 style="margin-top: 20px;">UV Irradiance Index:</h2>
+            <p class="radiance">{{day["local_uv_irradiance_index"]}}</p>
+            <h2>Max temp:</h2>
+            <p>{{day["max_temp"]}}°C</p>
+            <h2>Min temp:</h2>
+            <p>{{day["min_temp"]}}°C</p>
+            <h2>Pressure:</h2>
+            <p>{{day["pressure"]}}</p>
+            <h2>Sunrise/Sunset:</h2>
+            <p class="eternity">{{day["sunrise"]}} - {{day["sunset"]}}</p>
+            {% if day["predicted"] %}
+                <h2 style="color:blueviolet;"><i>Prediction</i></h2>
+            {% else %}
+                <h2 style="color:brown;">Actual</h2>
+            {% endif %}
+            <h2 class="date">{{day["terrestrial_date"]}}</h2>
+        </div>
+        <div class="day" id="Thursday">
+            <h1>Thursday</h1>
+            {% set day = days["thursday"] %}
+            {% if day["local_uv_irradiance_index"] == "Low" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"></div>
+            {% elif day["local_uv_irradiance_index"] == "Moderate" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.5;"></div>
+            {% elif day["local_uv_irradiance_index"] == "High" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.25;"></div>
+            {% else %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"
+                style="opacity: 0.1;"></div>
+            {% endif %}
+            <h2 style="margin-top: 20px;">UV Irradiance Index:</h2>
+            <p class="radiance">{{day["local_uv_irradiance_index"]}}</p>
+            <h2>Max temp:</h2>
+            <p>{{day["max_temp"]}}°C</p>
+            <h2>Min temp:</h2>
+            <p>{{day["min_temp"]}}°C</p>
+            <h2>Pressure:</h2>
+            <p>{{day["pressure"]}}</p>
+            <h2>Sunrise/Sunset:</h2>
+            <p class="eternity">{{day["sunrise"]}} - {{day["sunset"]}}</p>
+            {% if day["predicted"] %}
+                <h2 style="color:blueviolet;"><i>Prediction</i></h2>
+            {% else %}
+                <h2 style="color:brown;">Actual</h2>
+            {% endif %}
+            <h2 class="date">{{day["terrestrial_date"]}}</h2>
+        </div>
+        <div class="day" id="Friday">
+            <h1>Friday</h1>
+            {% set day = days["friday"] %}
+            {% if day["local_uv_irradiance_index"] == "Low" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"></div>
+            {% elif day["local_uv_irradiance_index"] == "Moderate" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.5;"></div>
+            {% elif day["local_uv_irradiance_index"] == "High" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.25;"></div>
+            {% else %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"
+                style="opacity: 0.1;"></div>
+            {% endif %}
+            <h2 style="margin-top: 20px;">UV Irradiance Index:</h2>
+            <p class="radiance">{{day["local_uv_irradiance_index"]}}</p>
+            <h2>Max temp:</h2>
+            <p>{{day["max_temp"]}}°C</p>
+            <h2>Min temp:</h2>
+            <p>{{day["min_temp"]}}°C</p>
+            <h2>Pressure:</h2>
+            <p>{{day["pressure"]}}</p>
+            <h2>Sunrise/Sunset:</h2>
+            <p class="eternity">{{day["sunrise"]}} - {{day["sunset"]}}</p>
+            {% if day["predicted"] %}
+                <h2 style="color:blueviolet;"><i>Prediction</i></h2>
+            {% else %}
+                <h2 style="color:brown;">Actual</h2>
+            {% endif %}
+            <h2 class="date">{{day["terrestrial_date"]}}</h2>
+        </div>
+        <div class="day" id="Saturday">
+            <h1>Saturday</h1>
+            {% set day = days["saturday"] %}
+            {% if day["local_uv_irradiance_index"] == "Low" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"></div>
+            {% elif day["local_uv_irradiance_index"] == "Moderate" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.5;"></div>
+            {% elif day["local_uv_irradiance_index"] == "High" %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg" 
+                style="opacity: 0.25;"></div>
+            {% else %}
+                <div class="catback"><img src="/pages/img/uncannycatnormal.png" alt="Uncanny Cat Normal" id="SundayCat" class="catimg"
+                style="opacity: 0.1;"></div>
+            {% endif %}
+            <h2 style="margin-top: 20px;">UV Irradiance Index:</h2>
+            <p class="radiance">{{day["local_uv_irradiance_index"]}}</p>
+            <h2>Max temp:</h2>
+            <p>{{day["max_temp"]}}°C</p>
+            <h2>Min temp:</h2>
+            <p>{{day["min_temp"]}}°C</p>
+            <h2>Pressure:</h2>
+            <p>{{day["pressure"]}}</p>
+            <h2>Sunrise/Sunset:</h2>
+            <p class="eternity">{{day["sunrise"]}} - {{day["sunset"]}}</p>
+            {% if day["predicted"] %}
+                <h2 style="color:blueviolet;"><i>Prediction</i></h2>
+            {% else %}
+                <h2 style="color:brown;">Actual</h2>
+            {% endif %}
+            <h2 class="date">{{day["terrestrial_date"]}}</h2>
+        </div>
+    </div>
+
+    <!-- Adding a sidebar with a list -->
+    <div class="sidebar">
+        <img src="/pages/img/logo.png" alt="Logo" class="sidebar-logo">
+        <h1 id="title">Mars Weather Predictor</h1>
+        <h1 id="authors">Powered by SkyNet</h1>
+        <img src="/pages/img/team.png" alt="team-logo" class="sidebar-logo" style="margin-top:0;">
+        
+    </div>
+
+</body>
+
+</html>

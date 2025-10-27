@@ -1,0 +1,193 @@
+/* Styling for the sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 215px; /* Reduced width from 200px to 180px */
+    background-color: #413D2F; /* Dark brown background */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #F2F1ED;
+}
+
+/* Updated styling for the calendar week layout to evenly space out days and make them responsive */
+.calendar-week {
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    margin-left: 310px;
+    gap: 1px; /* Add spacing between days */
+    box-sizing: border-box; /* Include padding and border in calculations */
+}
+
+#spacer {
+    display: none; /* Hide the spacer element */
+}
+
+.calendar-week .day {
+    width: auto; /* Remove fixed width */
+    padding: 2rem; /* Retain padding for larger size */
+    margin: 0.5rem; /* Retain reduced spacing */
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-radius: 8px; /* Retain rounded corners */
+    background-color: #f0f0f0; /* Retain background color */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Ensure all day divs have the exact same width */
+.calendar-week .day {
+    flex: none; /* Disable flex-grow to ensure fixed width */
+    width: 12.5%; /* Calculate width based on total available space */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    background-color: rgba(240, 240, 240, 0.5); /* Use rgba for background opacity */
+    opacity: 1; /* Keep overall div opacity at full */
+}
+
+
+
+
+.calendar-week .day h1 {
+    opacity: 1; /* Explicitly set h1 opacity to full */
+}
+
+/* Remove hover effect */
+.day:hover {
+    transform: none; /* Disable scaling on hover */
+}
+
+/* Styling to separate the days from the hours */
+.day {
+    margin: 0.5rem; /* Reduce spacing between days */
+    background-color: #f0f0f0; /* Light background color for days */
+    width: auto; /* Remove fixed width to allow dynamic sizing */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+} 
+
+@media (max-width: 768px) {
+    .calendar-week {
+        grid-template-columns: repeat(2, 1fr); /* Stack days on smaller screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .calendar-week {
+        grid-template-columns: repeat(4, 1fr); /* Adjust layout for medium screens */
+    }
+}
+
+/* Set background image for the page */
+body {
+    background-color: #683004;
+
+    background-image: url('/pages/img/background.png');
+    background-size: cover;
+    background-attachment: fixed; /* Ensure the background image does not scroll */
+}
+
+/* Adjust header sizes to be half their current size */
+h1 {
+    font-size: 200%; /* Reduce font size to half */
+}
+
+/* Center align all h1 elements */
+h1 {
+    text-align: center; /* Center the text horizontally */
+}
+
+.catimg {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    max-width: 120px;
+    max-height: 118px;
+    background-color: greenyellow;
+    border-radius: 18px;
+}
+
+
+.catback {
+    background-color: greenyellow;
+    display: flexbox;
+    justify-content: center;
+    border-radius: 18px;
+    padding: 2px;
+    max-width: 126px;
+    align-items: center;
+    position: relative; /* Position it relatively */
+    top: 0;
+    left: 7px;
+}
+
+.sidebar-logo {
+    width: 180px; /* Adjust logo width as needed */
+    height: auto;
+    display: block;
+    margin: 0; /* Center the logo and add bottom margin */
+}
+
+#title {
+    color: #F2F1ED;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 140%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5%;
+}
+
+p {
+    font-size: 250%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5%;
+    color: #550006;
+}
+
+.radiance {
+    font-size: 200%;
+}
+
+.eternity {
+    font-size: 150%;
+}
+
+.date {
+    position:relative;
+    bottom: 0px;
+    font-size: 150%;
+    text-align: center;
+}
+
+div + h2, p + h2 {
+            border-top: 4px solid #000000; /* Light gray divider */
+            margin-top: 1px; /* Add spacing above the divider */
+            padding-top: 1px; /* Add spacing below the divider */
+        }
+
+#Wednesday h1{
+    position: relative;
+    left: -10px;
+}
+
+#authors {
+    margin-top: 240%;
+    margin-bottom: 0;
+    color: #F2F1ED;
+    text-align: center;
+    font-size: 1rem;
+}

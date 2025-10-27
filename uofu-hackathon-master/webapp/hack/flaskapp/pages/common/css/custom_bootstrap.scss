@@ -1,0 +1,45 @@
+// Use NPM to install a local copy of bootstrap 5 in the root directory of this project.
+// A sass compiler will also need to be installed to generate raw css.
+
+// The full list of variables is in bootstrap/scss/variables within bootstrap.
+
+$white: #ffffff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000000;
+
+$blue: #2D82DB;
+$greyish: #969696;
+$royalBlue: #0d6efd;
+$aliceBlue: #bccbf5;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+
+$primary: $royalBlue;
+$secondary: $greyish;
+$success: $green;
+$info: $cyan;
+$warning: $aliceBlue;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+
+/* Import all of bootstrap. */
+/* docs: https://getbootstrap.com/docs/5.3/customize/sass/ */
+// All overrides must be placed before the import.
+// This import can be replaced by several smaller imports that only include parts of bootstrap, which results in a smaller file size after compilation from sass into raw css.
+@import "../../../../../node_modules/bootstrap/scss/bootstrap";
